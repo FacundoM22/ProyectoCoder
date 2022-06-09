@@ -10,8 +10,11 @@ urlpatterns = [
    
     path('', views.inicio, name="Inicio"), #esta era nuestra primer view
     path('cursos', views.cursos, name="Cursos"),
-    path('profesores', views.profesores, name="Profesores"),
-    path('estudiantes', views.estudiantes, name="Estudiantes"),
+    path('profesores', views.profesores_formulario, name="Profesores"),
+    path('estudiantes', views.estudiantes_formulario, name="Estudiantes"),
     path('entregables', views.entregables, name="Entregables"),
+    path("alta_curso", views.curso_formulario),
+    path("buscar_curso", views.buscar_curso),
+    path("buscar", views.buscar)
 ]
 
