@@ -5,9 +5,22 @@
 {% block contenidoQueCambia %}
 
 
-    <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
+
     <h1>Profesores</h1>
-    <p>Info de los profesores</p>
+    <form action="profesores" method="POST"> 
+        {% csrf_token %}
+        <p>Nombre:</p>
+        <input type="text" name="nombre">
+        <p>Apellido:</p>
+        <input type="text" name="apellido">
+        <p>Email:</p>
+        <input type="email" name="email">
+        Profesion:
+        <input type="profesion" name="profesion">
+       
+        <input type="submit" value="Send">
+       
+       </form>
 
   
 

@@ -5,9 +5,18 @@
 {% block contenidoQueCambia %}
 
 
-    <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
+  
     <h1>Cursos</h1>
-    <p>Acá va la info de los cursos</p>
+    <form action="alta_curso" method="POST">
+        {% csrf_token %}
+        <p>Nombre:</p>
+        <input type="text" name="nombre">
+        <p>Camada:</p>
+        <input type="number" name="camada">
+       
+        <input type="submit" value="Send">
+       
+       </form>
 
   
 
